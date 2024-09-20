@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login Page</title>
+
+</head>
+<body>
+    <div>
+        <div id="header">
+            <div><h1>Login Page</h1></div>
+        </div>
+        <div id="main">
+           <fieldset>
+            <legend>FILL AND LOGIN</legend>
+            <form action="first.html" method="post" name="form1">
+                <input type="text" id="username" name="username" placeholder="User Name"><br>
+                <input type="password" id="password" name="password" placeholder="Password"><br>
+                <input type="submit" id="loginButton" onclick="check(form1)">
+            </form>
+           </fieldset>
+        </div>
+    </div>
+  <script>
+    const check = (f1) =>{
+       var username = f1.username.value;
+       var password = f1.password.value;
+
+       if( username == "prit" && password == "prit1234"){
+        alert("you are login succesfully .....");
+       }else{
+        alert("something is wrong in this code");
+       }
+    }
+  </script>
+</body>
+</html>

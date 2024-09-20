@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Mobile number and email</title>
+</head>
+<body>
+    <div class="header">
+        <h1>Check phone Number and Email</h1>
+    </div>
+    <div class="main">
+        <fieldset>
+            <legend>fill the mobile number and email</legend>
+            <form action="" name="f2">
+                <label for="phoneNo">Enter Phone Number</label><br>
+                <input type="tel" name="phoneNo" ><br>
+                <label for="email">Enter Email Address</label><br>
+                <input type="email" name="email"><br>
+                <input type="submit" value="submit" onclick="check(f2)">
+            </form>
+        </fieldset>
+    </div>
+    <script>
+        var check = (f2) =>{
+            var a = f2.phoneNo.value;
+            var b = f2.email.value;
+
+            var c = /^[A-Za-z0-9.-]+@[A-Za-z]+[\.][A-Za-z]+$/;
+
+            if(c.test(b) == true){
+                if(a.length == 10){
+                    if(a.charAt(0) == 9 || a.charAt(0) == 8){
+                        alert("validation success")
+                    }
+                }
+            }
+            else{
+                alert("invalid unsuccess..")
+            }
+        }
+    </script>
+</body>
+</html>

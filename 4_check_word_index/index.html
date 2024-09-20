@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>chekc word Index</title>
+  </head>
+  <body>
+    <div class="header">
+      <h1>Check Word Position</h1>
+    </div>
+    <div class="main">
+      <fieldset>
+        <legend>enter one sentence</legend>
+        <form action="" name="f1">
+          <label for="sentence"> Sentence</label><br />
+          <input type="text" name="sentence" /><br />
+          <input type="submit" onclick="sentenceCheck(f1)" />
+        </form>
+      </fieldset>
+    </div>
+    <script>
+        var sentenceCheck = (f1) =>{
+            var sentence = f1.sentence.value;
+            var pattern = prompt("enter enter the word to  be serch for.")
+            alert(pattern);
+            
+            var index = sentence.indexOf(pattern)
+            
+            if(index != -1){
+                alert("position of word is "+(index+1))
+            }
+            else{
+                alert("word not found")
+            }
+        }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>check how many days left in your birthday</title>
+</head>
+<body>
+    <div class="header">
+        <h1>Birthday Check</h1>
+    </div>
+    <div class="main">
+    </div>
+    <script>
+       var mm = Number(prompt("what month You are birthday(1-12)"));
+       mm = mm-1;
+       var dd = Number(prompt("what day you birthday (1-31) ?"));
+       var today = new Date(); // today date
+       var bday = new Date();
+
+       var yy = bday.getFullYear();
+
+       bday.setDate(dd);
+       bday.setMonth(mm);
+       bday.setFullYear(yy+1);
+
+       var result = (Math.floor((bday.getTime()-today)/(1000*60*60*24)))
+       if(result >= 365){
+        result = result - 365
+       }
+       
+       document.write(result+" days left in your birthdate....")
+    </script>
+</body>
+</html>

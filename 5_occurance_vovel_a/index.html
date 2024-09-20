@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Ocuurance</title>
+</head>
+<body>
+    <div class="header">
+        <h1>Find Occurance </h1>
+    </div>
+    <div class="main">
+        <fieldset>
+            <legend>enter the sentence</legend>
+            <form action="" name="form1">
+                <label for="word">word</label><br>
+                <input type="text" id="word" name="word"><br>
+                <input type="submit" onclick="occuranceCheck()">
+            </form>
+        </fieldset>
+    </div>
+    <script>
+        var occuranceCheck = (f1) =>{
+           var word = document.getElementById("word").value;
+         
+            var firstIndex = word.indexOf("a");
+            var lastIndex = word.lastIndexOf("a");
+
+            if (firstIndex === -1) {
+                alert("The vowel 'a' was not found.");
+            } else {
+                var stringBetween = word.substring(firstIndex + 1, lastIndex);
+                alert(`First occurrence of 'a' is at position: ${firstIndex + 1}`);
+                alert(`Last occurrence of 'a' is at position: ${lastIndex + 1}`);
+                alert(`String between them: "${stringBetween}"`);
+            }
+        }
+        
+    </script>
+</body>
+</html>
